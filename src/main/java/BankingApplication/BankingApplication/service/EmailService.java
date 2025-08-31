@@ -4,5 +4,6 @@ import BankingApplication.BankingApplication.dto.EmailDetails;
 
 public interface EmailService {
     void sentEmailAlerts(EmailDetails emailDetails);
+    void sentEmailWithAttachment(EmailDetails emailDetails);
      
 }
