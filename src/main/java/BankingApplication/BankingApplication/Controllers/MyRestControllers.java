@@ -3,6 +3,7 @@ package BankingApplication.BankingApplication.Controllers;
 import BankingApplication.BankingApplication.dto.BankResponse;
 import BankingApplication.BankingApplication.dto.CreditDebitRequest;
 import BankingApplication.BankingApplication.dto.EnquiryRequest;
+import BankingApplication.BankingApplication.dto.LoginDto;
 import BankingApplication.BankingApplication.dto.TransferRequest;
 import BankingApplication.BankingApplication.dto.UserRequest;
 import BankingApplication.BankingApplication.service.UserService;
@@ -70,5 +71,9 @@ public class MyRestControllers {
     @PostMapping("transfer")
     public BankResponse transfer(@RequestBody TransferRequest request) {
         return userService.transfer(request);
+    }
+    @PostMapping("/login")
+    public BankResponse login(@RequestBody LoginDto loginDto){
+        return userService.login(loginDto);
     }
 }
